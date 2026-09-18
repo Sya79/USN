@@ -1,197 +1,436 @@
-<HTML:5>
-    <head>
-        <title>USN Products</title>
-    </head>
+<!DOCTYPE html>
+<html:5>
 
-    <body>
-        <h1 style=" text-align: center">Ultimate Sport Nutrition<img src ="Images/images (1).jpg" alt="USN logo" class="logo"></h1>
-        
-      <link rel ="stylesheet" href="css/style.css">
-      <section class ="navigation">
-        <nav class="nav-links">
-         <h2>
-     <a href = "index.html">Home</a>
-     <a href ="about.html">About us</a>
-     <a href = "enquiry.html">Enquiry</a>
-     <a href = "contact.html">Contact</a>
-     <a href="basket.html">Shopping Cart</a>
-     <a href="checkout.html">Payment</a>
-         </h2>
-        </nav> 
-      </section>
+<head>
     
-      <p><font size ="4">Your Ultimate Sports Nutrition products. Enjoy the best supplement and see wonderful changes occur in your body which will affect your lifestyle at the end of the day.</font></p>
 
-       
-      <h2>Our Products</h2>
-<!--Items that are in the store-->
-      <h3 style="text-align:center ">Proteins</h3>
+    <title>USN Products</title>
 
-      <section class="products">
-        <div class = "Products">
-            <div class ="product">
-                <img src ="Images/Whey Protein.webp" width="120" alt="Protein Powder">
-                <h4>Whey protein</h4>
-                <p>High-quality protein to support muscle growth and recovery.</p>
-                <p class ="Price">R499.99</p>
-                <button onclick="addToBasket">Add to Cart</button>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>
+            Ultimate Sports Nutrition
+            <img src="Images/images (1).jpg"
+                 alt="USN logo"
+                 class="logo">
+        </h1>
+    </header>
+
+    <section class="navigation">
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="contact.html">Contact</a>
+            <a href="basket.html">Shopping Cart</a>
+            <a href="checkout.html">Payment</a>
+        </nav>
+    </section>
+
+    <main>
+
+        <p class="intro">
+            Your Ultimate Sports Nutrition products. Enjoy quality supplements
+            that can support your training, recovery and fitness lifestyle.
+        </p>
+
+        <h2>Our Products</h2>
+
+        <h3>Proteins</h3>
+
+        <section class="products">
+
+            <div class="product">
+                <img src="Images/Whey Protein.webp"
+                     alt="Whey Protein Powder">
+
+                <h4>Whey Protein</h4>
+
+                <p>
+                    High-quality protein to support muscle growth and recovery.
+                </p>
+
+                <p class="price">R499.99</p>
+
+                <button onclick="addToBasket('Whey Protein', 499.99)">
+                    Add to Cart
+                </button>
             </div>
 
-            <div class ="product">
-                <img src ="Images/Whey blue lab.jpg" width="120" alt="Protein Powder">
+
+            <div class="product">
+                <img src="Images/Whey blue lab.jpg"
+                     alt="Whey Blue Lab Protein">
+
                 <h4>Whey Blue Lab Protein</h4>
-                <p>Very examined and most quality to support muscle recovery and growth.</p>
-                <p class ="Price">R599.99</p>
-                <button onclick="addToBasket">Add to Cart</button>
+
+                <p>
+                    Quality protein designed to support muscle recovery
+                    and growth.
+                </p>
+
+                <p class="price">R599.99</p>
+
+                <button onclick="addToBasket('Whey Blue Lab Protein', 599.99)">
+                    Add to Cart
+                </button>
             </div>
 
-            <div class ="product">
-                <img src ="Images/Whey(1).jpg" width="120" alt ="Protein Powder">
-                <h4>Whey all in one </h4>
-                <p>Rich in every nutrition needed by the body.</p>
-                <p class ="Price">R549.99</p>
-                <button onclick="addToBasket">Add to Cart</button>
+
+            <div class="product">
+                <img src="Images/Whey(1).jpg"
+                     alt="Whey All in One Protein">
+
+                <h4>Whey All in One</h4>
+
+                <p>
+                    A nutritional supplement designed to support training
+                    and recovery.
+                </p>
+
+                <p class="price">R549.99</p>
+
+                <button onclick="addToBasket('Whey All in One', 549.99)">
+                    Add to Cart
+                </button>
             </div>
 
-            <div clas="Products">
-                <img src ="Images/Hyperbolic.jpg" width="120" alt="Protein Powder">
+
+            <div class="product">
+                <img src="Images/Hyperbolic.jpg"
+                     alt="Hyperbolic Mass">
+
                 <h4>Hyperbolic Mass</h4>
-                <p>It an extreme mass gainer</p>
-                <p class ="Price">R699.99</p>
-                <button onclick="addToBasket">Add to Cart</button>
+
+                <p>
+                    A high-calorie mass-gainer supplement.
+                </p>
+
+                <p class="price">R699.99</p>
+
+                <button onclick="addToBasket('Hyperbolic Mass', 699.99)">
+                    Add to Cart
+                </button>
             </div>
 
-            <hr size ="5" width="80%" color = "black"/>
-
-     <h3 style="text-align:center ">Pre-Workouts</h3>
-         <div class ="products">
-            <img src ="Images/Pre-Workout XTS.webp" width="120" alt ="Pre-Workout">
-            <h4>Pre-Workout XTS</h4>
-            <p>Its provides energy and focus before training.</p>
-            <p class="Price">R299.99</p>
-            <button onclick="addToBasket">Add to Cart</button>
-         </div>
-
-         <div class="products">
-            <img src ="Images/hyperdrive platinum.jpg" width="120" alt ="Pre-Workout">
-            <h4>Pre-Workout XTS Platinum</h4>
-            <p>More safe to use because its executes in the time needed to provide energy.</p>
-            <p class ="Price">R249.99</p>
-            <button onclick="addToBasket">Add to Cart</button>
-         </div>
-
-         <div class="products">
-            <img src ="Images/Qush.jpg" width="120" alt="Pre-Workout">
-            <h4>Qush</h4>
-            <p>Design to provide energy and focus before training.</p>
-            <p class="Price">R229.99</p>
-            <button onclick="addToBasket">Add to Cart</button>
-         </div>
-
-         <div class="Products">
-            <img src ="Images/energy drink.jpg" width="120" alt="energy drink">
-            <h4>Energy drink</h4>
-            <p>Its an energy drink which contains lot of caffeine.</p>
-            <p class="Price">R34.99</p>
-            <button onclick="addToBasket">Add to Cart</button>
-         </div>
-         
-         <hr size ="5" width="80%" color = "black"/>
-         <h3 style="text-align:center ">Aminos</h3>
-
-         <div class="Products">
-            <img src="Images/Aminos (1).jpg" width="120" alt="bcaa supplement">
-            <h4>Fast growth</h4>
-            <p>Support muscle recovery and helps you grow faster.</p>
-            <p class="Price">R219.99</p>
-            <button onclick="addToBasket">Add to Cart</button>
-         </div>
-
-         <div class ="Products">
-            <img src ="Images/Aminos.jpg" width="120" alt ="Aminos">
-            <h4>Aminos ALL9</h4>
-            <p>Support muscle recovery and helps reduce workout fatigue.</p>
-            <p class ="Price">R179.99</p>
-            <button onclick="addToBasket">Add to Cart</button>
-         </div>
-
-         <div class ="Products">
-            <img src ="Images/Aminos(3).jpg" width="120" alt="Aminos">
-            <h4>Beast Aminos</h4>
-            <p>Deals with Size and helps to reduce a muscle fatigue</p>
-            <p class="Price">R299.99</p>
-            <button onclick="addToBasket">Add to Cart</button>
-         </div>
-         
-         <hr size ="5" width="80%" color = "black"/>
-         <h3 style="text-align:center ">Creatine</h3>
-
-         <div class ="Products">
-            <img src ="Images/creatine.webp" width="120" alt="Creatine">
-            <h4>Creatine 3in1</h4>
-            <p>For muscle recovery and stamina</p>
-            <p class="Price">R219.99</p>
-            <button onclick="addToBasket">Add to Cart</button>
-         </div>
-
-         <div class ="Products">
-            <img src ="Images/Creatine.jpg" width="120" alt ="Creatine">
-            <h4>Creatine Monohydrate</h4>
-            <p>Helps improve strength, power and workout performance.</p>
-            <p class ="Price">R299.99</p>
-            <button onclick="addToBasket">Add to Cart</button>
-         </div>
-
-         <div class="Products">
-            <img src ="Images/Creatine (2).jpg" width="120" alt="Creatine">
-            <h4>Creatine Transport</h4>
-            <p>Advanced Delivery system for improved muscle performance, size & strength.</p>
-            <p class="Price">R219.99</p>
-            <button onclick="addToBasket">Add to Cart</button>
-         </div>
-         
-         <hr size ="5" width="80%" color = "black"/>
-         <h3 style="text-align:center ">Additionals</h3>
-
-         <div class ="Products">
-            <img src ="Images/Testo.jpg" width="120" alt="Testos">
-            <h4>Testo gH</h4>
-            <p>Gives energy through your workout.</p>
-            <p class ="Price">R229.99</p>
-            <button onclick="addToBasket">Add to Cart</button>
-         </div>
-
-         <div class ="Products">
-            <img src ="Images/images (9) - Copy.jpg" width="120" alt= "Sale">
-            <h4>A shaker + recovery for low price.</h4>
-            <p>It's a sale for everyone a shaker plus a recovery for:</p>
-            <p class ="Price">R299.99</p>
-            <button onclick="addToBasket">Add to Cart</button>
-         </div>
-      </section>
-
-    </div>
-       <footer>
-        <h3>Contact us:</h3>
-        <p>📞Phone: 021 589 6631</p>
-        <p>📧Email: info@ultimatesportsnutrition.co.za</p>
-        <p>📍Johanesburg, Gauteng, South Africa</p>
+        </section>
 
 
-
-         <p align ="center">If you can't find what you want feel free to call us or text us on WhatsApp</p>
-
-
-     </footer>
+        <hr>
 
 
+        <h3>Pre-Workouts</h3>
+
+        <section class="products">
+
+            <div class="product">
+                <img src="Images/Pre-Workout XTS.webp"
+                     alt="Pre-Workout XTS">
+
+                <h4>Pre-Workout XTS</h4>
+
+                <p>
+                    Designed to provide energy and focus before training.
+                </p>
+
+                <p class="price">R299.99</p>
+
+                <button onclick="addToBasket('Pre-Workout XTS', 299.99)">
+                    Add to Cart
+                </button>
+            </div>
 
 
+            <div class="product">
+                <img src="Images/hyperdrive platinum.jpg"
+                     alt="Hyperdrive Platinum Pre-Workout">
+
+                <h4>Hyperdrive Platinum</h4>
+
+                <p>
+                    A pre-workout supplement designed to support energy
+                    during training.
+                </p>
+
+                <p class="price">R249.99</p>
+
+                <button onclick="addToBasket('Hyperdrive Platinum', 249.99)">
+                    Add to Cart
+                </button>
+            </div>
 
 
+            <div class="product">
+                <img src="Images/Qush.jpg"
+                     alt="Qush Pre-Workout">
+
+                <h4>Qush</h4>
+
+                <p>
+                    Designed to support energy and focus before training.
+                </p>
+
+                <p class="price">R229.99</p>
+
+                <button onclick="addToBasket('Qush', 229.99)">
+                    Add to Cart
+                </button>
+            </div>
 
 
+            <div class="product">
+                <img src="Images/energy drink.jpg"
+                     alt="Energy Drink">
 
-    </body>
+                <h4>Energy Drink</h4>
 
-</HTML:5>
+                <p>
+                    A caffeinated drink designed to support energy.
+                </p>
+
+                <p class="price">R34.99</p>
+
+                <button onclick="addToBasket('Energy Drink', 34.99)">
+                    Add to Cart
+                </button>
+            </div>
+
+        </section>
+
+
+        <hr>
+
+
+        <h3>Aminos</h3>
+
+        <section class="products">
+
+            <div class="product">
+
+                <img src="Images/Aminos (1).jpg"
+                     alt="BCAA Supplement">
+
+                <h4>Fast Growth</h4>
+
+                <p>
+                    Designed to support muscle recovery after exercise.
+                </p>
+
+                <p class="price">R219.99</p>
+
+                <button onclick="addToBasket('Fast Growth', 219.99)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product">
+
+                <img src="Images/Aminos.jpg"
+                     alt="Aminos ALL9">
+
+                <h4>Aminos ALL9</h4>
+
+                <p>
+                    Supports muscle recovery after training.
+                </p>
+
+                <p class="price">R179.99</p>
+
+                <button onclick="addToBasket('Aminos ALL9', 179.99)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product">
+
+                <img src="Images/Aminos(3).jpg"
+                     alt="Beast Aminos">
+
+                <h4>Beast Aminos</h4>
+
+                <p>
+                    Amino acid supplement designed to support recovery.
+                </p>
+
+                <p class="price">R299.99</p>
+
+                <button onclick="addToBasket('Beast Aminos', 299.99)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <hr>
+
+
+        <h3>Creatine</h3>
+
+        <section class="products">
+
+            <div class="product">
+
+                <img src="Images/creatine.webp"
+                     alt="Creatine 3 in 1">
+
+                <h4>Creatine 3 in 1</h4>
+
+                <p>
+                    Designed to support training performance and recovery.
+                </p>
+
+                <p class="price">R219.99</p>
+
+                <button onclick="addToBasket('Creatine 3 in 1', 219.99)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product">
+
+                <img src="Images/Creatine.jpg"
+                     alt="Creatine Monohydrate">
+
+                <h4>Creatine Monohydrate</h4>
+
+                <p>
+                    Helps support strength, power and exercise performance.
+                </p>
+
+                <p class="price">R299.99</p>
+
+                <button onclick="addToBasket('Creatine Monohydrate', 299.99)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product">
+
+                <img src="Images/Creatine (2).jpg"
+                     alt="Creatine Transport">
+
+                <h4>Creatine Transport</h4>
+
+                <p>
+                    Creatine supplement designed to support strength
+                    and performance.
+                </p>
+
+                <p class="price">R219.99</p>
+
+                <button onclick="addToBasket('Creatine Transport', 219.99)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <hr>
+
+
+        <h3>Additionals</h3>
+
+        <section class="products">
+
+            <div class="product">
+
+                <img src="Images/Testo.jpg"
+                     alt="Testo GH">
+
+                <h4>Testo GH</h4>
+
+                <p>
+                    Sports supplement for your training routine.
+                </p>
+
+                <p class="price">R229.99</p>
+
+                <button onclick="addToBasket('Testo GH', 229.99)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product">
+
+                <img src="Images/images (9) - Copy.jpg"
+                     alt="Shaker and Recovery Supplement Sale">
+
+                <h4>Shaker + Recovery Special</h4>
+
+                <p>
+                    Special combination of a shaker and recovery supplement.
+                </p>
+
+                <p class="price">R299.99</p>
+
+                <button onclick="addToBasket('Shaker + Recovery', 299.99)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <h3>Contact Us</h3>
+
+        <p>📞 Phone: 021 589 6631</p>
+
+        <p>
+            📧 Email:
+            info@ultimatesportsnutrition.co.za
+        </p>
+
+        <p>
+            📍 Johannesburg, Gauteng, South Africa
+        </p>
+
+        <p>
+            If you cannot find what you want, feel free to call us
+            or contact us on WhatsApp.
+        </p>
+
+    </footer>
+
+
+    <script>
+        function addToBasket(name, price) {
+
+            let basket = JSON.parse(localStorage.getItem("basket")) || [];
+
+            basket.push({
+                name: name,
+                price: price
+            });
+
+            localStorage.setItem("basket", JSON.stringify(basket));
+
+            alert(name + " has been added to your cart!");
+        }
+    </script>
+
+</body>
+
+</html:5>
