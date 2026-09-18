@@ -1,0 +1,130 @@
+/* General styling */
+h1{background-color: darkblue;
+   font-weight: bold;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   text-align: center;
+   margin: 0;
+   color: azure;
+}
+
+h2{text-align: center;
+
+    font-weight: bolder;
+    color: #000;
+}
+
+h3{text-align: center;
+}
+
+
+
+/* General styling */
+body{margin: 0;
+     padding: 0;
+     font-family: Arial, Helvetica, sans-serif;
+     background-color: lightgray;
+}
+
+/* Navigation*/
+nav a{color: white;
+      text-decoration: none;
+      display: inline-block;
+      padding: 10px 20px;
+}
+
+.navigation{background-color: blue;
+            padding: 30px 0%;
+            text-align: center;
+            border-radius: 5px;
+}
+
+.navigation h2{color: azure;
+               font-size: 32px;
+               margin-bottom: 25px;
+
+}
+
+.nav-links a:hover{background-color: darkblue;
+             border-radius: 5px;
+             transition: background-color 0.3s ease;
+}
+
+/* Welcoming section*/
+.Welcoming{font-family: Georgia, 'Times New Roman', Times, serif;
+           font-size: 15px;
+
+}
+
+.Welcoming p{ font-size: large;
+    
+
+}
+
+/* Terms and Conditions*/
+.T\&Cs p{text-align: center;
+
+}
+
+
+
+/* Footer */
+footer{background-color: darkgray;
+       text-align: center;
+       color: white;
+       padding: 30px 20px;       
+}
+
+/* Logo */
+.logo{width: 50px;
+      height: auto;
+}
+
+/* Centering the image */
+img
+{display: block;
+     margin: 0 auto;
+}
+
+/*branding image*/
+.branding-image{width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .navigation h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .welcoming {
+        font-size: 14px;
+    }
+
+    .welcoming p {
+        font-size: medium;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    .navigation h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .welcoming {
+        font-size: 13px;
+    }
+
+    .welcoming p {
+        font-size: small;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+}
+
