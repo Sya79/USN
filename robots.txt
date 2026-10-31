@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /basket.html
+Disallow: /checkout.html
+
+Sitemap: https://sya79.github.io/USN/sitemap.xml

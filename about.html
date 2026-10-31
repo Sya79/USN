@@ -1,49 +1,164 @@
-<HTml:5>
-    <head>
-        <title>About us- USN</title>
-    </head>
+```html
+<!doctype html>
+<html lang="en-ZA">
 
-    <body>
+<head>
+    <meta charset="utf-8">
 
-            <link rel ="stylesheet" href="css/style.css">
-            <h1>About Us<img src ="Images/images (1).jpg" alt="USN logo" class="logo"></h1>
-            <section class ="navigation">
-            <nav class="nav-links">
-         <h2 style="text-align: center">
-             <a href = "index.html">Home</a>
-             <a href ="about.html">About us</a>
-             <a href = "product.html">Products</a>
-             <a href = "enquiry.html">Enquiry</a>
-             <a href = "contact.html">Contact</a>
-         </h2>
-            </nav>
-           </section>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
 
-            <section class ="about">
-            
-            <p>Welcome to USN. We are dedicated and willing to help athletes and fitness enthusiasts achieve their health and fitness goals through using our number 1 brand in whole world</p>
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
 
-            <p>Our target is to provide reliable nutrition products that support strength, energy, muscle growth and recovery. We are committed to provide our customers with quality product and best service</p>
+    <meta name="description"
+          content="Learn about Ultimate Sports Nutrition and our focus on helping athletes and fitness enthusiasts.">
 
-            <p>Whether you are a professional athlete or just starting your fitness journey, USN is here to support you in every step of the way</p>
+    <meta name="keywords"
+          content="about USN, sports nutrition South Africa">
+
+    <title>About USN | Sports Nutrition</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+
+        <a class="brand" href="index.html">
+            <img src="Images/images (1).jpg" alt="">
+            <span>Ultimate Sports Nutrition</span>
+        </a>
+
+        <nav class="nav" aria-label="Main navigation">
+
+            <div class="nav-inner">
+
+                <a href="index.html">Home</a>
+
+                <a href="about.html" aria-current="page">About</a>
+
+                <a href="product.html">Products</a>
+
+                <a href="enquiry.html">Enquiry</a>
+
+                <a href="contact.html">Contact</a>
+
+                <a href="basket.html">Shopping cart</a>
+
+                <a href="checkout.html">Checkout</a>
+
+                <span class="cart-count" data-cart-count>
+                    Cart (0)
+                </span>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main id="main" class="container">
+
+        <article class="panel about-copy">
+
+            <p class="muted">Who we are</p>
+
+            <h1 class="page-title">About USN</h1>
+
+            <p>
+                Welcome to Ultimate Sports Nutrition.
+                We aim to help athletes and fitness enthusiasts
+                find sports nutrition products that fit their
+                health and fitness goals.
+            </p>
+
+            <p>
+                Our range includes products for strength training,
+                energy, and recovery. We are committed to clear
+                product information and helpful service for
+                customers at every stage of their fitness journey.
+            </p>
+
+            <div class="tabs"
+                 role="tablist"
+                 aria-label="About USN">
+
+                <button type="button"
+                        role="tab"
+                        data-tab="story"
+                        aria-selected="true">
+                    Our story
+                </button>
+
+                <button type="button"
+                        role="tab"
+                        data-tab="values"
+                        aria-selected="false">
+                    Our values
+                </button>
+
+            </div>
+
+            <section id="story"
+                     data-tab-panel
+                     class="notice">
+
+                <h2>Our story</h2>
+
+                <p>
+                    We support active lifestyles with a selection
+                    of sports nutrition products and information
+                    to help customers make informed choices.
+                </p>
+
             </section>
-        
 
-        <footer>
-        <h3>Contact us:</h3>
-        <p>📞Phone: 021 589 6631</p>
-        <p>📧Email: info@ultimatesportsnutrition.co.za</p>
-        <p>📍Johanesburg, Gauteng, South Africa</p>
+            <section id="values"
+                     data-tab-panel
+                     class="notice"
+                     hidden>
 
-        <p>Follow us on:</p>
-        <p>Facebook| Tik Tok| Instagram</p>
+                <h2>Our values</h2>
 
-         <p align ="center">T&Cs are applied if you use this product</p>
+                <p>
+                    We value helpful service, straightforward
+                    product information, and a welcoming experience
+                    for every customer.
+                </p>
 
+            </section>
 
-     </footer>
+            <p>
+                <a class="button" href="product.html">
+                    Explore products
+                </a>
+            </p>
 
+        </article>
 
-    </body>
+    </main>
 
-</HTml:5>
+    <footer class="site-footer">
+
+        <p>
+            <a href="contact.html">Contact USN</a>
+            ·
+            <a href="enquiry.html">Send an enquiry</a>
+        </p>
+
+        <p>
+            &copy; 2026 Ultimate Sports Nutrition
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+```

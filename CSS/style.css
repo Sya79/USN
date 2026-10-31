@@ -1,130 +1,625 @@
-/* General styling */
-h1{background-color: darkblue;
-   font-weight: bold;
-   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   text-align: center;
-   margin: 0;
-   color: azure;
-}
+/* ==============================
+   1. ROOT VARIABLES
+   ============================== */
 
-h2{text-align: center;
-
-    font-weight: bolder;
-    color: #000;
-}
-
-h3{text-align: center;
-}
-
-
-
-/* General styling */
-body{margin: 0;
-     padding: 0;
-     font-family: Arial, Helvetica, sans-serif;
-     background-color: lightgray;
-}
-
-/* Navigation*/
-nav a{color: white;
-      text-decoration: none;
-      display: inline-block;
-      padding: 10px 20px;
-}
-
-.navigation{background-color: blue;
-            padding: 30px 0%;
-            text-align: center;
-            border-radius: 5px;
-}
-
-.navigation h2{color: azure;
-               font-size: 32px;
-               margin-bottom: 25px;
-
-}
-
-.nav-links a:hover{background-color: darkblue;
-             border-radius: 5px;
-             transition: background-color 0.3s ease;
-}
-
-/* Welcoming section*/
-.Welcoming{font-family: Georgia, 'Times New Roman', Times, serif;
-           font-size: 15px;
-
-}
-
-.Welcoming p{ font-size: large;
-    
-
-}
-
-/* Terms and Conditions*/
-.T\&Cs p{text-align: center;
-
+:root {
+    --navy: #071d49;
+    --blue: #155eef;
+    --ink: #172033;
+    --muted: #5b6475;
+    --paper: #fff;
+    --bg: #f3f5f8;
+    --line: #d9deea;
+    --accent: #e8f0ff;
+    --radius: 16px;
+    --shadow: 0 12px 32px #10234a14;
 }
 
 
+/* ==============================
+   2. GENERAL STYLING
+   ============================== */
 
-/* Footer */
-footer{background-color: darkgray;
-       text-align: center;
-       color: white;
-       padding: 30px 20px;       
+* {
+    box-sizing: border-box;
 }
 
-/* Logo */
-.logo{width: 50px;
-      height: auto;
+body {
+    margin: 0;
+    color: var(--ink);
+    font: 16px/1.6 Arial, Helvetica, sans-serif;
+    background: var(--bg);
 }
 
-/* Centering the image */
-img
-{display: block;
-     margin: 0 auto;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-/*branding image*/
-.branding-image{width: 100%;
-                height: auto;
-                display: block;
-                margin: 0 auto;
+a {
+    color: #124cb5;
 }
 
-/* Tablet */
-@media screen and (max-width: 768px) {
-    .navigation h2 {
-        font-size: 28px;
-        margin-bottom: 20px;
+
+/* ==============================
+   3. KEYBOARD FOCUS
+   ============================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #f4b400;
+    outline-offset: 2px;
+}
+
+
+/* ==============================
+   4. SKIP LINK
+   ============================== */
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    background: #fff;
+    padding: 0.6rem;
+    z-index: 10;
+}
+
+
+/* ==============================
+   5. WEBSITE HEADER
+   ============================== */
+
+.site-header {
+    background: var(--navy);
+    color: #fff;
+}
+
+
+/* ==============================
+   6. BRAND AND LOGO
+   ============================== */
+
+.brand {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+
+.brand img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: #fff;
+}
+
+
+/* ==============================
+   7. NAVIGATION BAR
+   ============================== */
+
+.nav {
+    background: #102d68;
+}
+
+.nav-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0.25rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    color: #fff;
+    padding: 0.65rem 0.85rem;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.nav a:hover,
+.nav a[aria-current=page] {
+    background: #ffffff20;
+}
+
+
+/* ==============================
+   8. SHOPPING CART COUNTER
+   ============================== */
+
+.cart-count {
+    margin-left: auto;
+    color: #fff;
+    padding: 0.4rem 0.7rem;
+}
+
+
+/* ==============================
+   9. MAIN CONTAINER
+   ============================== */
+
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.25rem;
+}
+
+
+/* ==============================
+   10. HERO SECTION
+   ============================== */
+
+.hero {
+    background:
+        linear-gradient(110deg, #071d49ed, #154a9bd9),
+        url('../Images/images.jpg') center/cover;
+
+    color: white;
+    border-radius: var(--radius);
+    padding: clamp(2rem, 6vw, 5rem);
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    line-height: 1.1;
+    max-width: 700px;
+    margin: 0 0 1rem;
+}
+
+.hero p {
+    max-width: 650px;
+}
+
+
+/* ==============================
+   11. BUTTONS
+   ============================== */
+
+.button,
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    border-radius: 9px;
+    padding: 0.7rem 1rem;
+
+    background: var(--blue);
+    color: #fff;
+
+    font: inherit;
+    font-weight: 700;
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button.secondary {
+    background: var(--navy);
+}
+
+button:hover,
+.button:hover {
+    filter: brightness(0.9);
+}
+
+
+/* ==============================
+   12. SECTION HEADINGS
+   ============================== */
+
+.section-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 2rem 0 1rem;
+}
+
+.section-head h2,
+.page-title {
+    margin: 0.2rem 0;
+}
+
+
+/* ==============================
+   13. PRODUCT GRID
+   ============================== */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+
+/* ==============================
+   14. CARDS AND PANELS
+   ============================== */
+
+.card,
+.panel {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1rem;
+}
+
+
+/* ==============================
+   15. PRODUCT CARDS
+   ============================== */
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card img {
+    width: 100%;
+    height: 185px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 10px;
+    cursor: zoom-in;
+}
+
+.product-card h3 {
+    margin: 0.6rem 0 0;
+}
+
+.product-card p {
+    margin: 0.25rem 0;
+    color: var(--muted);
+}
+
+.price {
+    color: var(--navy) !important;
+    font-weight: 800;
+    font-size: 1.15rem;
+}
+
+.product-card .button {
+    margin-top: auto;
+}
+
+
+/* ==============================
+   16. SEARCH AND FILTER TOOLBAR
+   ============================== */
+
+.toolbar {
+    display: flex;
+    gap: 0.65rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.toolbar input,
+.toolbar select {
+    min-width: 190px;
+    flex: 1;
+}
+
+
+/* ==============================
+   17. FORM FIELDS
+   ============================== */
+
+.field {
+    display: grid;
+    gap: 0.35rem;
+    margin: 1rem 0;
+}
+
+.field input,
+.field select,
+.field textarea,
+.toolbar input,
+.toolbar select {
+    border: 1px solid #aab3c2;
+    border-radius: 8px;
+    padding: 0.7rem;
+    font: inherit;
+    background: #fff;
+}
+
+.field textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+
+/* ==============================
+   18. MUTED TEXT AND HINTS
+   ============================== */
+
+.hint,
+.muted {
+    color: var(--muted);
+}
+
+
+/* ==============================
+   19. FORM MESSAGES
+   ============================== */
+
+.form-message {
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.success {
+    background: #e7f7ed;
+    color: #14532d;
+}
+
+.error {
+    background: #fff0f0;
+    color: #8d2020;
+}
+
+
+/* ==============================
+   20. SHOPPING CART ROWS
+   ============================== */
+
+.cart-row {
+    display: grid;
+    grid-template-columns: 80px 1fr auto auto;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid var(--line);
+    padding: 1rem 0;
+}
+
+.cart-row img {
+    width: 76px;
+    height: 76px;
+    object-fit: contain;
+}
+
+.cart-row input {
+    width: 70px;
+    padding: 0.45rem;
+}
+
+
+/* ==============================
+   21. SHOPPING CART TOTAL
+   ============================== */
+
+.cart-total {
+    text-align: right;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin: 1rem 0;
+}
+
+
+/* ==============================
+   22. TWO-COLUMN LAYOUT
+   ============================== */
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+
+/* ==============================
+   23. ACCORDION
+   ============================== */
+
+.accordion button {
+    width: 100%;
+    justify-content: space-between;
+    background: #edf2fb;
+    color: var(--ink);
+    margin: 0.3rem 0;
+}
+
+.accordion [hidden] {
+    display: none;
+}
+
+
+/* ==============================
+   24. TABS
+   ============================== */
+
+.tabs {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.tabs button {
+    background: #e5ebf5;
+    color: var(--ink);
+}
+
+.tabs button[aria-selected=true] {
+    background: var(--navy);
+    color: #fff;
+}
+
+
+/* ==============================
+   25. IMAGE LIGHTBOX
+   ============================== */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: #000c;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    z-index: 20;
+}
+
+.lightbox[hidden] {
+    display: none;
+}
+
+.lightbox img {
+    max-height: 80vh;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.lightbox button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+
+/* ==============================
+   26. ABOUT US PAGE
+   ============================== */
+
+.about-copy {
+    max-width: 760px;
+}
+
+
+/* ==============================
+   27. CONTACT LIST
+   ============================== */
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+
+/* ==============================
+   28. WEBSITE FOOTER
+   ============================== */
+
+.site-footer {
+    margin-top: 3rem;
+    padding: 2rem 1.25rem;
+    background: #081a3a;
+    color: #e8eefb;
+    text-align: center;
+}
+
+.site-footer a {
+    color: #fff;
+}
+
+
+/* ==============================
+   29. NOTICE BOX
+   ============================== */
+
+.notice {
+    background: var(--accent);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+
+/* ==============================
+   30. EMPTY STATE
+   ============================== */
+
+.empty {
+    text-align: center;
+    padding: 2rem;
+}
+
+
+/* ==============================
+   31. SCREEN-READER-ONLY TEXT
+   ============================== */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+/* ==============================
+   32. RESPONSIVE DESIGN
+   ============================== */
+
+@media (max-width: 620px) {
+
+    .container {
+        margin: 1.2rem auto;
     }
 
-    .welcoming {
-        font-size: 14px;
+    .cart-row {
+        grid-template-columns: 60px 1fr auto;
+        gap: 0.5rem;
     }
 
-    .welcoming p {
-        font-size: medium;
-    }
-}
-
-/* Mobile */
-@media screen and (max-width: 480px) {
-    .navigation h2 {
-        font-size: 24px;
-        margin-bottom: 15px;
+    .cart-row .remove {
+        grid-column: 2 / -1;
+        justify-self: end;
     }
 
-    .welcoming {
-        font-size: 13px;
+    .two-col {
+        grid-template-columns: 1fr;
     }
 
-    .welcoming p {
-        font-size: small;
+    .nav-inner {
+        justify-content: center;
     }
 
-    .nav-links {
-        flex-direction: column;
+    .cart-count {
+        margin: 0 auto;
+    }
+
+    .brand {
+        justify-content: center;
     }
 }
 
+
+/* ==============================
+   33. HOME PAGE INFORMATION
+   ============================== */
+
+.home-info {
+    margin-top: 2rem;
+}

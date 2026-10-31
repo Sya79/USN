@@ -1,89 +1,280 @@
-<HTML:5>
-    <head>
-        <title>Checkout-USN</title>
-    </head>
+<!doctype html>
+<html lang="en-ZA">
 
-    <body>
-       <link rel ="stylesheet" href="css/style.css">
-        <h1>Ultimate Sports Nutrition<img src ="Images/images (1).jpg" alt="USN logo" class="logo"></h1>
+<head>
 
-         <section class ="navigation">
-       <nav class="nav-links">
-        <h2 style="text-align: center">
-        <a href = "index.html">Home</a>
-        <a href ="about.html">About us</a>
-        <a href = "product.html">Products</a>
-        <a href = "enquiry.html">Enquiry</a>
-        <a href = "contact.html">Contact</a>
-        <a href ="basket.html">Shopping Cart</a>
-        </h2>
+    <meta charset="utf-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
+
+    <meta name="description"
+          content="Review your USN order details in the student checkout demonstration.">
+
+    <title>Checkout | USN</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <script src="app.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- Skip link -->
+    <a class="skip-link" href="#main">
+        Skip to content
+    </a>
+
+
+    <!-- Website Header -->
+    <header class="site-header">
+
+        <!-- Brand and Logo -->
+        <a class="brand" href="index.html">
+
+            <img src="Images/images (1).jpg" alt="">
+
+            <span>Ultimate Sports Nutrition</span>
+
+        </a>
+
+
+        <!-- Navigation Bar -->
+        <nav class="nav" aria-label="Main navigation">
+
+            <div class="nav-inner">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="product.html">
+                    Products
+                </a>
+
+                <a href="enquiry.html">
+                    Enquiry
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="basket.html">
+                    Shopping cart
+                </a>
+
+                <a href="checkout.html" aria-current="page">
+                    Checkout
+                </a>
+
+                <span class="cart-count" data-cart-count>
+                    Cart (0)
+                </span>
+
+            </div>
+
         </nav>
-         </section>
 
-         <header>
-        <p>Checkout</p>
-        </header>
-        
-        <section class="customers Information">
-        <div class ="Checkout-container">
+    </header>
 
-            <h2>Customer Details</h2>
-              <form action ="#" method="post">
 
-                <label for ="name">Full Name:</label>
-                <input type ="text" id="name" name="name" required>
+    <!-- Main Checkout Content -->
+    <main id="main" class="container">
 
-                <label for ="email">Email Address:</label>
-                <input type ="email" id="email" name="email" required>
+        <section class="panel">
 
-                <label for ="phone">Phone Number:</label>
-                <input type ="tel" id="phone" name="phone" required>
+            <p class="muted">
+                Final step
+            </p>
 
-                <label for="address">Delivery Address</label>
-                <textarea id="address" name="address" rows="4" required></textarea>
+            <h1 class="page-title">
+                Checkout
+            </h1>
 
-                <label for="payment">Payment Method:</label>
-                <select id="payment" name="payment" required>
-                    <option value="">Select Payment Method</option>
-                    <option value="card">Credit/Debit Card</option>
-                    <option value="eft">EFT</option>
-                    <option value="cash">Cash on Delivery</option>
-                </select>
 
-                <div class="order-total">
-                    Order Total:R499.99
+            <!-- Order Total -->
+            <p>
+                Order total:
+                <strong data-total>R0.00</strong>
+                ·
+                <a href="basket.html">Review cart</a>
+            </p>
+
+
+            <!-- Checkout Form -->
+            <form action="#"
+                  method="post"
+                  data-demo-form
+                  data-form-type="checkout">
+
+
+                <!-- Customer Name and Email -->
+                <div class="two-col">
+
+                    <div class="field">
+
+                        <label for="name">
+                            Full name *
+                        </label>
+
+                        <input
+                            id="name"
+                            name="name"
+                            autocomplete="name"
+                            minlength="2"
+                            maxlength="80"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="email">
+                            Email address *
+                        </label>
+
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
                 </div>
 
-                <button type="submit" class="place-order">
-                    Place Order
+
+                <!-- Phone Number and Payment Method -->
+                <div class="two-col">
+
+                    <div class="field">
+
+                        <label for="phone">
+                            Phone number *
+                        </label>
+
+                        <input
+                            id="phone"
+                            name="phone"
+                            type="tel"
+                            autocomplete="tel"
+                            pattern="[+]?[0-9 ()-]{7,20}"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="payment">
+                            Preferred payment method *
+                        </label>
+
+                        <select
+                            id="payment"
+                            name="payment"
+                            required
+                        >
+
+                            <option value="">
+                                Choose payment
+                            </option>
+
+                            <option>
+                                Credit or debit card
+                            </option>
+
+                            <option>
+                                EFT
+                            </option>
+
+                            <option>
+                                Cash on delivery
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Delivery Address -->
+                <div class="field">
+
+                    <label for="address">
+                        Delivery address *
+                    </label>
+
+                    <textarea
+                        id="address"
+                        name="address"
+                        autocomplete="street-address"
+                        minlength="8"
+                        maxlength="300"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Submit Button -->
+                <button type="submit">
+                    Review order
                 </button>
-            </section>
-              </form>
-
-              <a href="basket.html"class="back-cart">Back to Cart</a>
-        </div>
 
 
+                <!-- Checkout Notice -->
+                <p class="hint">
+                    This checkout is for coursework demonstration only.
+                    It does not collect card details, place orders,
+                    or process payments.
+                </p>
 
-    </body>
+            </form>
 
-     <footer>
-        <h3>Contact us:</h3>
-        <p>📞Phone: 021 589 6631</p>
-        <p>📧Email: info@ultimatesportsnutrition.co.za</p>
-        <p>📍Johanesburg, Gauteng, South Africa</p>
+        </section>
 
-        <p>Follow us on:</p>
-        <p>Facebook| Tik Tok| Instagram</p>
-
-         <p align ="center">T&Cs are applied if you use this product</p>
-
-
-     </footer>
+    </main>
 
 
+    <!-- Website Footer -->
+    <footer class="site-footer">
 
+        <p>
 
+            <a href="basket.html">
+                Back to cart
+            </a>
 
+            ·
 
-</HTML:5>
+            <a href="contact.html">
+                Contact us
+            </a>
+
+        </p>
+
+        <p>
+            &copy; 2026 Ultimate Sports Nutrition
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

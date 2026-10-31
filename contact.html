@@ -1,63 +1,351 @@
-    <HTml:5>
-        <head>
-            <title>Contact Us - USN</title>
-        </head>
-        
-        <link rel ="stylesheet" href="css/style.css">
-        <body>
-          <h1>Contact USN <img src ="Images/images (1).jpg" alt="USN logo" class="logo"></h1>
+<!doctype html>
+<html lang="en-ZA">
 
-          <section class ="navigation">
-            <nav class="nav-links">
-           <h2 style="text-align: center">
-           <a href = "index.html">Home</a>
-           <a href ="about.html">About us</a>
-           <a href = "product.html">Products</a>
-           <a href = "enquiry.html">Enquiry</a>
-           <a href="basket.html">Shopping Cart</a>
-           <a href="checkout.html">Payment</a>
-           </nav>
-          </h2>
-          </section>
+<head>
 
-          <P>Have a question about our products or need help choosing the right sports nutrition products? Contact us using the details below </P>
+    <meta charset="utf-8">
 
-          <h2 style="text-align: center">Contact Details</h2>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
 
-          <p><strong>Phone:</strong>021 589 6631</p>
-          <p><strong>Email:</strong>info@ultimatesportsnutrition.co.za</p>
-          <p><strong>Address</strong>Johhanesburg, Gauteng, South Africa</p>
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
 
-          
+    <meta name="description"
+          content="Contact USN in Johannesburg by phone, email, or the website contact form.">
 
-          <h2>Business hours</h2>
+    <meta name="keywords"
+          content="contact USN, sports nutrition Johannesburg">
 
-          <p>Monday - Friday: 08:00 - 17:00</p>
-          <p>Saturday: 09:00 - 14:00</p>
-          <p>Sunday: Closed</p>
+    <title>Contact USN | Johannesburg</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <script src="app.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- Skip Link -->
+    <a class="skip-link" href="#main">
+        Skip to content
+    </a>
 
 
-        </body>
+    <!-- Website Header -->
+    <header class="site-header">
 
-         <footer>
-        <h3>Contact us:</h3>
-        <p>📞Phone: 021 589 6631</p>
-        <p>📧Email: info@ultimatesportsnutrition.co.za</p>
-        <p>📍Johanesburg, Gauteng, South Africa</p>
+        <!-- Brand and Logo -->
+        <a class="brand" href="index.html">
 
-        <p>Follow us on:</p>
-        <p>Facebook| Tik Tok| Instagram</p>
+            <img src="Images/images (1).jpg" alt="">
 
-         <p align ="center">T&Cs are applied if you use this product</p>
+            <span>
+                Ultimate Sports Nutrition
+            </span>
 
-
-     </footer>
+        </a>
 
 
+        <!-- Navigation Bar -->
+        <nav class="nav" aria-label="Main navigation">
+
+            <div class="nav-inner">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="product.html">
+                    Products
+                </a>
+
+                <a href="enquiry.html">
+                    Enquiry
+                </a>
+
+                <a href="contact.html" aria-current="page">
+                    Contact
+                </a>
+
+                <a href="basket.html">
+                    Shopping cart
+                </a>
+
+                <a href="checkout.html">
+                    Checkout
+                </a>
+
+                <span class="cart-count" data-cart-count>
+                    Cart (0)
+                </span>
+
+            </div>
+
+        </nav>
+
+    </header>
 
 
+    <!-- Main Contact Content -->
+    <main id="main" class="container">
+
+        <div class="two-col">
 
 
+            <!-- Contact Details Section -->
+            <section class="panel">
+
+                <p class="muted">
+                    Get in touch
+                </p>
+
+                <h1 class="page-title">
+                    Contact USN
+                </h1>
+
+                <p>
+                    Have a general message for our team?
+                    Use the form or contact us directly.
+                </p>
 
 
-    </HTml:5>
+                <!-- Contact Information -->
+                <ul class="contact-list">
+
+                    <li>
+
+                        <strong>
+                            Phone:
+                        </strong>
+
+                        <a href="tel:+27215896631">
+                            021 589 6631
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <strong>
+                            Email:
+                        </strong>
+
+                        <a href="mailto:info@ultimatesportsnutrition.co.za">
+                            info@ultimatesportsnutrition.co.za
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <strong>
+                            Location:
+                        </strong>
+
+                        Johannesburg, Gauteng, South Africa
+
+                    </li>
+
+                </ul>
+
+
+                <!-- Business Hours -->
+                <h2>
+                    Business hours
+                </h2>
+
+                <p>
+                    Monday–Friday: 08:00–17:00
+                    <br>
+
+                    Saturday: 09:00–14:00
+                    <br>
+
+                    Sunday: Closed
+                </p>
+
+            </section>
+
+
+            <!-- Contact Form Section -->
+            <section class="panel">
+
+                <h2>
+                    Send a message
+                </h2>
+
+                <form
+                    action="mailto:info@ultimatesportsnutrition.co.za"
+                    method="post"
+                    enctype="text/plain"
+                    data-demo-form
+                    data-form-type="contact"
+                >
+
+
+                    <!-- Full Name -->
+                    <div class="field">
+
+                        <label for="name">
+                            Full name *
+                        </label>
+
+                        <input
+                            id="name"
+                            name="name"
+                            autocomplete="name"
+                            minlength="2"
+                            maxlength="80"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Email Address -->
+                    <div class="field">
+
+                        <label for="email">
+                            Email address *
+                        </label>
+
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            autocomplete="email"
+                            maxlength="120"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Phone Number -->
+                    <div class="field">
+
+                        <label for="phone">
+                            Phone number
+                        </label>
+
+                        <input
+                            id="phone"
+                            name="phone"
+                            type="tel"
+                            autocomplete="tel"
+                            pattern="[+]?[0-9 ()-]{7,20}"
+                        >
+
+                    </div>
+
+
+                    <!-- Message Type -->
+                    <div class="field">
+
+                        <label for="topic">
+                            Message type *
+                        </label>
+
+                        <select
+                            id="topic"
+                            name="topic"
+                            required
+                        >
+
+                            <option value="">
+                                Select a message type
+                            </option>
+
+                            <option>
+                                General question
+                            </option>
+
+                            <option>
+                                Product support
+                            </option>
+
+                            <option>
+                                Order support
+                            </option>
+
+                            <option>
+                                Feedback
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Message -->
+                    <div class="field">
+
+                        <label for="message">
+                            Full message *
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            minlength="10"
+                            maxlength="2000"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- Submit Button -->
+                    <button type="submit">
+                        Prepare email
+                    </button>
+
+
+                    <!-- Form Instructions -->
+                    <p class="hint">
+                        After validation, your email app opens
+                        with the details filled in. You can review
+                        and send the email there.
+                    </p>
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- Website Footer -->
+    <footer class="site-footer">
+
+        <p>
+
+            <a href="enquiry.html">
+                Make a product enquiry
+            </a>
+
+            ·
+
+            <a href="product.html">
+                Browse products
+            </a>
+
+        </p>
+
+        <p>
+            &copy; 2026 Ultimate Sports Nutrition
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,66 +1,157 @@
-<HTml:5>
-    <head>
-        <title>Shopping Cart-USN</title>
-    </head>
 
-    <body>
-        <header>
+<!doctype html>
+<html lang="en-ZA">
 
-            <h1>USN <img src ="Images/images (1).jpg" alt="USN logo" class="logo"></h1>
-          <link rel ="stylesheet" href="css/style.css">  
-        </header>
-          <section class ="navigation">
-          <nav class="nav-links">
-         <h2 style="text-align: center">
-         <a href = "index.html">Home</a>
-         <a href ="about.html">About us</a>
-         <a href = "product.html">Products</a>
-         <a href = "enquiry.html">Enquiry</a>
-         <a href = "contact.html">Contact</a>
-         <a href="checkout.html">Payment</a>
-         </h2>
-          </nav>
-        </section>
-        <h3>Your Shopping Cart</h3>
-          <section class="package">
-        <div class ="cart">
+<head>
+    <meta charset="utf-8">
 
-           <div class ="cart-item">
-            <div>
-                <img src ="Images/Whey Protein.webp" width="120" alt="Protein Powder">
-                <p><strong>Protein Powder</strong></p>
-                <p>R499.99</p>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+        http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:"
+    >
+
+    <meta
+        name="description"
+        content="Review your USN shopping cart and continue to checkout."
+    >
+
+    <title>Shopping Cart | USN</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Skip link for accessibility -->
+    <a class="skip-link" href="#main">
+        Skip to content
+    </a>
+
+    <!-- Website header -->
+    <header class="site-header">
+
+        <!-- Website logo and name -->
+        <a class="brand" href="index.html">
+
+            <img
+                src="Images/images (1).jpg"
+                alt=""
+            >
+
+            <span>Ultimate Sports Nutrition</span>
+
+        </a>
+
+        <!-- Main navigation menu -->
+        <nav class="nav" aria-label="Main navigation">
+
+            <div class="nav-inner">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="product.html">
+                    Products
+                </a>
+
+                <a href="enquiry.html">
+                    Enquiry
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="basket.html" aria-current="page">
+                    Shopping cart
+                </a>
+
+                <a href="checkout.html">
+                    Checkout
+                </a>
+
+                <!-- Displays the number of items in the cart -->
+                <span class="cart-count" data-cart-count>
+                    Cart (0)
+                </span>
+
             </div>
-              <button class ="remove">Remove</button>
-           </div>
 
-           <div class ="total">
-            Total:R499.99
-           </div>
+        </nav>
 
-           <a href="checkout.html"class="Checkout">Proceed to Checkout</a>
+    </header>
 
-        </div>
-          </section>
+    <!-- Main shopping cart content -->
+    <main id="main" class="container">
 
-    </body>
+        <section class="panel">
 
-     <footer>
-        <h3>Contact us:</h3>
-        <p>📞Phone: 021 589 6631</p>
-        <p>📧Email: info@ultimatesportsnutrition.co.za</p>
-        <p>📍Johanesburg, Gauteng, South Africa</p>
+            <p class="muted">
+                Your selections
+            </p>
 
-        <p>Follow us on:</p>
-        <p>Facebook| Tik Tok| Instagram</p>
+            <h1 class="page-title">
+                Shopping cart
+            </h1>
 
-         <p align ="center">T&Cs are applied if you use this product</p>
+            <!-- JavaScript displays cart items here -->
+            <div data-cart></div>
 
+            <!-- Displays the total price -->
+            <p class="cart-total">
+                Total:
+                <span data-total>
+                    R0.00
+                </span>
+            </p>
 
-     </footer>
+            <!-- Shopping cart buttons -->
+            <div class="toolbar">
 
+                <a class="button secondary" href="product.html">
+                    Continue shopping
+                </a>
 
+                <a class="button" href="checkout.html">
+                    Proceed to checkout
+                </a>
 
+            </div>
 
+            <!-- Information about how the cart works -->
+            <p class="hint">
+                Your cart is saved in this browser using local storage.
+                It is a demonstration and is not connected to a live store.
+            </p>
 
-</HTml:5>
+        </section>
+
+    </main>
+
+    <!-- Website footer -->
+    <footer class="site-footer">
+
+        <p>
+            <a href="contact.html">
+                Need help? Contact us
+            </a>
+        </p>
+
+        <p>
+            &copy; 2026 Ultimate Sports Nutrition
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
